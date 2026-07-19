@@ -614,3 +614,6 @@ app.post('/api/posts', async (req, res) => {
             views: 0,
             createdAt: admin.firestore.FieldValue.serverTimestamp(),
         })
+app.listen(PORT, () => {
+  console.log(`✅ سيرفر قرطاج خادم على المنفذ ${PORT}`);
+});
