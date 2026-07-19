@@ -17,3 +17,7 @@ app.get('/api/stats', (req, res) => {
 app.listen(PORT, () => {
   console.log(`✅ سيرفر قرطاج خادم على المنفذ ${PORT}`);
 });
+git clone https://github.com/Kime/Garthage-server.git
+cd Garthage-server
+npm install
+node server.js
