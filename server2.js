@@ -614,6 +614,24 @@ app.post('/api/posts', async (req, res) => {
             views: 0,
             createdAt: admin.firestore.FieldValue.serverTimestamp(),
         })
+        // ===== API Routes للاحصائيات =====
+app.get("/api/stats", (req, res) => {
+  res.json({
+activeUsers: Math.floor(Math.random() * 500) + 100,
+    views: Math.floor(Math.random() * 10000) + 5000,
+    likes: Math.floor(Math.random() * 2000) + 500,
+    coins: Math.floor(Math.random() * 10000) + 1000
+  });
+});
+
+// ===== API Routes للمستخدمين =====
+app.get("/api/users", (req, res) => {
+  res.json([]);
+});
+
+app.post("/api/register", (req, res) => {
+  res.json({ message: "User registered" });
+});
 app.listen(PORT, () => {
   console.log(`✅ سيرفر قرطاج خادم على المنفذ ${PORT}`);
 });
