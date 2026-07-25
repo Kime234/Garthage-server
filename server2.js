@@ -217,4 +217,4 @@ app.listen(PORT, () => {
     console.log('  - GET  /api/posts');
     console.log('  - POST /api/streams/start');
     console.log('  - GET  /api/streams/live');
-});      Update server2.js - Fix API routes                      
+});                         
